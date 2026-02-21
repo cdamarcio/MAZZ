@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laudos e Perícias - MAZZ</title>
+    <title>Laudos Técnicos e Perícias - MAZZ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>body { padding-top: 70px; }</style>
+    <style>
+        body { padding-top: 70px; }
+        .hero-laudos { 
+            background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center; color: white; padding: 80px 0;
+        }
+        .laudo-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; height: 100%; }
+        .laudo-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important; }
+        .icon-box { font-size: 2.5rem; margin-bottom: 20px; }
+        .border-eng { border-top: 5px solid #0d6efd; }
+        .border-sst { border-top: 5px solid #198754; }
+        .border-ti { border-top: 5px solid #6610f2; }
+        .check-list { list-style: none; padding-left: 0; font-size: 0.9rem; }
+        .check-list li::before { content: "✓ "; color: #28a745; font-weight: bold; margin-right: 5px; }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="index.html">MAZZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
@@ -24,15 +40,70 @@
         </div>
     </nav>
 
+    <header class="hero-laudos text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Laudos Técnicos e Perícias Especializadas</h1>
+            <p class="lead">Pareceres fundamentados para garantir segurança jurídica e técnica ao seu patrimônio ou empresa.</p>
+        </div>
+    </header>
+
     <main class="container my-5 flex-grow-1">
-        <h1 class="fw-bold text-primary">Engenharia e Laudos</h1>
-        <p>Serviços técnicos especializados em Goiânia e região.</p>
-        <ul class="list-group list-group-flush mt-4 shadow-sm">
-            <li class="list-group-item">Vistorias Cautelares de Vizinhança</li>
-            <li class="list-group-item">Avaliação de Imóveis Urbanos</li>
-            <li class="list-group-item">Laudos de Reforma (NBR 16.280)</li>
-            <li class="list-group-item">Perícias Judiciais</li>
-        </ul>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card laudo-card shadow-sm p-4 border-eng">
+                    <div class="icon-box">🏗️</div>
+                    <h4 class="fw-bold text-primary">Engenharia Civil</h4>
+                    <p class="text-muted small">Vistorias e diagnósticos precisos para estruturas e edificações.</p>
+                    <ul class="check-list text-muted">
+                        <li>Vistoria Cautelar de Vizinhança</li>
+                        <li>Laudo de Reforma (NBR 16.280)</li>
+                        <li>Inspeção Predial e Patologias</li>
+                        <li>Avaliação de Imóveis Urbanos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card laudo-card shadow-sm p-4 border-sst">
+                    <div class="icon-box">🛡️</div>
+                    <h4 class="fw-bold text-success">Segurança do Trabalho</h4>
+                    <p class="text-muted small">Conformidade total com as Normas Regulamentadoras (MTE).</p>
+                    <ul class="check-list text-muted">
+                        <li>LTCAT (Laudo de Condições Ambientais)</li>
+                        <li>LIP (Laudo de Insalubridade/Periculosidade)</li>
+                        <li>PGR (Programa de Gerenciamento de Riscos)</li>
+                        <li>Laudos de Máquinas (NR-12)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card laudo-card shadow-sm p-4 border-ti">
+                    <div class="icon-box">💻</div>
+                    <h4 class="fw-bold" style="color: #6610f2;">Tecnologia (TI)</h4>
+                    <p class="text-muted small">Auditoria e perícia em sistemas e infraestrutura digital.</p>
+                    <ul class="check-list text-muted">
+                        <li>Perícia Digital e Forense Computacional</li>
+                        <li>Auditoria de Segurança de Redes</li>
+                        <li>Laudo de Avaliação de Software</li>
+                        <li>Análise de Vulnerabilidades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 p-5 bg-white rounded-4 shadow-sm border-start border-primary border-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold text-primary">Atuação como Perito Judicial e Assistente Técnico</h3>
+                    <p class="mb-0 text-muted">Elaboração de quesitos, acompanhamento de diligências e confecção de pareceres técnicos para processos judiciais. Atuamos com imparcialidade e rigor científico para auxiliar o judiciário e as partes envolvidas.</p>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <a href="https://wa.me/5562996466033?text=Olá! Preciso de um orçamento para Laudo/Perícia." class="btn btn-primary btn-lg px-4 shadow">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="mt-auto pb-4 text-muted small text-center bg-light pt-4 border-top">
@@ -42,6 +113,7 @@
     <a href="https://wa.me/5562996466033" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 10px #999;z-index:1000;" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" style="margin-top: 12px;"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
     </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
