@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre a MAZZ - Especialista Márcio Oliveira</title>
+    <title>Sobre a MAZZ - Compromisso e Excelência</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { padding-top: 70px; }
         .hero-sobre {
-            background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.9)), url('https://images.unsplash.com/photo-1454165833467-13594d99e023?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 31, 63, 0.92), rgba(0, 31, 63, 0.92)), url('https://images.unsplash.com/photo-1454165833467-13594d99e023?auto=format&fit=crop&w=1350&q=80');
             background-size: cover; background-position: center; color: white; padding: 60px 0;
         }
         .profile-img {
             width: 250px; height: 250px; object-fit: cover; border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid white;
         }
-        .timeline-box { border-left: 3px solid #0d6efd; padding-left: 20px; margin-left: 10px; }
-        .timeline-item { position: relative; margin-bottom: 30px; }
-        .timeline-item::before {
-            content: ""; position: absolute; left: -27px; top: 5px;
-            width: 12px; height: 12px; background: #0d6efd; border-radius: 50%;
-        }
-        .skill-badge { background: #f0f7ff; color: #001f3f; border: 1px solid #d1e7ff; padding: 8px 15px; border-radius: 50px; display: inline-block; margin: 5px; font-weight: 600; font-size: 0.9rem; }
+        .compromisso-card { border: none; border-left: 4px solid #0d6efd; background: #fff; transition: 0.3s; }
+        .compromisso-card:hover { background: #f8f9fa; transform: translateX(5px); }
+        .essencia-box { background: #001f3f; color: white; border-radius: 20px; padding: 40px; margin-top: 50px; }
+        .highlight-text { color: #ffc107; font-weight: bold; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
@@ -44,66 +41,66 @@
 
     <header class="hero-sobre text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Nossa História & Expertise</h1>
-            <p class="lead">Excelência técnica liderada por Márcio Rodrigues de Oliveira.</p>
+            <h1 class="display-4 fw-bold">Sobre a MAZZ</h1>
+            <p class="lead">Estratégia, Responsabilidade e Excelência Técnica.</p>
         </div>
     </header>
 
     <main class="container my-5">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-5 mb-5">
             <div class="col-lg-4 text-center">
                 <img src="https://www.kmprojetos.eng.br/wp-content/uploads/2023/05/marcio-oliveira.jpg" alt="Márcio Oliveira" class="profile-img mb-4">
                 <h3 class="fw-bold mb-0">Márcio Rodrigues</h3>
-                <p class="text-primary fw-bold">Engenheiro Civil & Consultor Técnico</p>
-                <div class="d-flex justify-content-center gap-2 mt-3">
-                    <a href="https://wa.me/5562996466033" class="btn btn-success btn-sm px-4 shadow-sm">WhatsApp</a>
+                <p class="text-primary fw-bold">Fundador & Diretor Técnico</p>
+            </div>
+            <div class="col-lg-8">
+                <h2 class="fw-bold text-dark mb-4">Nosso Compromisso</h2>
+                <p class="lead text-muted">Na MAZZ, compromisso não é apenas uma declaração institucional — é um princípio operacional que orienta cada decisão, cada projeto e cada entrega.</p>
+                <p class="text-muted">Desde nossa fundação, em <strong>2025</strong>, em <strong>Goiânia–GO</strong> (Setor Jardim Balneário Meia Ponte), estruturamos nossa atuação com base em responsabilidade técnica, excelência educacional e foco absoluto em resultados. Assumimos o compromisso de oferecer soluções que realmente gerem impacto.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card compromisso-card p-4 shadow-sm h-100">
+                    <h5 class="fw-bold text-primary">1. Excelência Técnica</h5>
+                    <p class="small text-muted mb-0">Trabalhamos com padrões elevados e fundamentação sólida. Não entregamos conteúdo superficial. Entregamos preparo consistente.</p>
                 </div>
             </div>
-            
-            <div class="col-lg-8">
-                <h2 class="fw-bold text-dark mb-4">Sobre a MAZZ</h2>
-                <p class="lead text-muted">A MAZZ foi fundada no ano de **2025** na cidade de **Goiânia-GO**, situada no setor **Jardim Balneário Meia Ponte**. Iniciamos nossa trajetória focados exclusivamente no setor de **Cursos e Treinamentos Técnicos**, com o objetivo de elevar o padrão de capacitação profissional na região.</p>
-                
-                <p class="text-muted">Hoje, sob a liderança de Márcio Oliveira, expandimos nossa atuação para soluções multidisciplinares que unem a Engenharia Civil, a Segurança do Trabalho, a Tecnologia da Informação e a preparação de alto nível para concursos públicos.</p>
-
-                <div class="mt-4">
-                    <h5 class="fw-bold">Áreas de Domínio:</h5>
-                    <div class="skill-badge">Engenharia Civil</div>
-                    <div class="skill-badge">Segurança do Trabalho (SST)</div>
-                    <div class="skill-badge">Tecnologia da Informação</div>
-                    <div class="skill-badge">Inteligência Artificial</div>
-                    <div class="skill-badge">Perícias Judiciais</div>
-                    <div class="skill-badge">Educação e Concursos</div>
+            <div class="col-md-6">
+                <div class="card compromisso-card p-4 shadow-sm h-100">
+                    <h5 class="fw-bold text-primary">2. Resultados Mensuráveis</h5>
+                    <p class="small text-muted mb-0">Nosso foco é performance: Aprovação, empregabilidade e evolução de carreira. Resultado não é promessa, é direcionamento estratégico.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card compromisso-card p-4 shadow-sm h-100">
+                    <h5 class="fw-bold text-primary">3. Ética e Transparência</h5>
+                    <p class="small text-muted mb-0">Relações pautadas na integridade e clareza. Confiança é construída com consistência e respeito aos prazos.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card compromisso-card p-4 shadow-sm h-100">
+                    <h5 class="fw-bold text-primary">4. Inovação e Atualização</h5>
+                    <p class="small text-muted mb-0">Integramos Engenharia, SST e TI de forma estratégica. Acreditamos que evolução é obrigação, não diferencial.</p>
                 </div>
             </div>
         </div>
 
-        <hr class="my-5">
-
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="fw-bold mb-4">Trajetória e Qualificações</h3>
-                <div class="timeline-box">
-                    <div class="timeline-item">
-                        <h6 class="fw-bold mb-1">Engenharia Civil</h6>
-                        <p class="text-muted small">Vasta experiência em execução de obras, projetos estruturais e regularização técnica.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h6 class="fw-bold mb-1">Segurança do Trabalho (NRs)</h6>
-                        <p class="text-muted small">Especialista em Normas Regulamentadoras, com foco em treinamentos operacionais e conformidade legal.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h6 class="fw-bold mb-1">Sistemas & IA</h6>
-                        <p class="text-muted small">Desenvolvimento de soluções tecnológicas, APIs e integração de Inteligência Artificial para otimização de processos.</p>
-                    </div>
+        <div class="essencia-box shadow-lg">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="fw-bold mb-4">Nossa Essência</h2>
+                    <p>Sob a liderança de <span class="highlight-text">Márcio Oliveira</span> — professor, analista de sistemas, matemático e engenheiro civil com mais de 20 anos de experiência em TI — a MAZZ opera com visão multidisciplinar e cultura de alta performance.</p>
+                    <p class="mb-0">Atuamos para transformar trajetórias profissionais com responsabilidade, estratégia e excelência.</p>
                 </div>
-            </div>
-            
-            <div class="col-md-6">
-                <h3 class="fw-bold mb-4">Nosso Compromisso</h3>
-                <div class="card border-0 shadow-sm p-4 bg-white rounded-4">
-                    <p class="mb-0 text-muted italic">"A MAZZ nasceu da necessidade de entregar clareza técnica e resultados práticos. Seja em um laudo de engenharia ou em uma apostila para concurso, nosso foco é a precisão e o sucesso de quem confia no nosso trabalho."</p>
-                    <footer class="blockquote-footer mt-3 mb-0">Márcio Oliveira, Fundador</footer>
+                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                    <ul class="list-unstyled fw-bold fs-5">
+                        <li class="mb-2">✅ Entregar Qualidade</li>
+                        <li class="mb-2">✅ Gerar Resultado</li>
+                        <li class="mb-2">✅ Construir Credibilidade</li>
+                        <li>✅ Promover Crescimento</li>
+                    </ul>
                 </div>
             </div>
         </div>
