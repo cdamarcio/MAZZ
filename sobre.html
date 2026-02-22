@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - MAZZ</title>
+    <title>Sobre a MAZZ - Especialista Márcio Oliveira</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>body { padding-top: 70px; }</style>
+    <style>
+        body { padding-top: 70px; }
+        .hero-sobre {
+            background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.9)), url('https://images.unsplash.com/photo-1454165833467-13594d99e023?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center; color: white; padding: 60px 0;
+        }
+        .profile-img {
+            width: 250px; height: 250px; object-fit: cover; border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid white;
+        }
+        .timeline-box { border-left: 3px solid #0d6efd; padding-left: 20px; margin-left: 10px; }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-item::before {
+            content: ""; position: absolute; left: -27px; top: 5px;
+            width: 12px; height: 12px; background: #0d6efd; border-radius: 50%;
+        }
+        .skill-badge { background: #f0f7ff; color: #001f3f; border: 1px solid #d1e7ff; padding: 8px 15px; border-radius: 50px; display: inline-block; margin: 5px; font-weight: 600; font-size: 0.9rem; }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="index.html">MAZZ</a>
@@ -24,18 +42,77 @@
         </div>
     </nav>
 
-    <main class="container my-5 flex-grow-1 text-center">
-        <h1 class="fw-bold text-primary">Sobre Nós</h1>
-        <p class="mt-4">Liderada por Márcio Rodrigues de Oliveira, a MAZZ foca em soluções técnicas de alta performance, unindo Engenharia Civil, Treinamentos NRs e consultoria especializada.</p>
+    <header class="hero-sobre text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Nossa História & Expertise</h1>
+            <p class="lead">Excelência técnica liderada por Márcio Rodrigues de Oliveira.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-4 text-center">
+                <img src="https://www.kmprojetos.eng.br/wp-content/uploads/2023/05/marcio-oliveira.jpg" alt="Márcio Oliveira" class="profile-img mb-4">
+                <h3 class="fw-bold mb-0">Márcio Rodrigues</h3>
+                <p class="text-primary fw-bold">Engenheiro Civil & Consultor Técnico</p>
+                <div class="d-flex justify-content-center gap-2 mt-3">
+                    <a href="https://wa.me/5562996466033" class="btn btn-success btn-sm px-4 shadow-sm">WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-8">
+                <h2 class="fw-bold text-dark mb-4">Sobre a MAZZ</h2>
+                <p class="lead text-muted">A MAZZ foi fundada no ano de **2025** na cidade de **Goiânia-GO**, situada no setor **Jardim Balneário Meia Ponte**. Iniciamos nossa trajetória focados exclusivamente no setor de **Cursos e Treinamentos Técnicos**, com o objetivo de elevar o padrão de capacitação profissional na região.</p>
+                
+                <p class="text-muted">Hoje, sob a liderança de Márcio Oliveira, expandimos nossa atuação para soluções multidisciplinares que unem a Engenharia Civil, a Segurança do Trabalho, a Tecnologia da Informação e a preparação de alto nível para concursos públicos.</p>
+
+                <div class="mt-4">
+                    <h5 class="fw-bold">Áreas de Domínio:</h5>
+                    <div class="skill-badge">Engenharia Civil</div>
+                    <div class="skill-badge">Segurança do Trabalho (SST)</div>
+                    <div class="skill-badge">Tecnologia da Informação</div>
+                    <div class="skill-badge">Inteligência Artificial</div>
+                    <div class="skill-badge">Perícias Judiciais</div>
+                    <div class="skill-badge">Educação e Concursos</div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="fw-bold mb-4">Trajetória e Qualificações</h3>
+                <div class="timeline-box">
+                    <div class="timeline-item">
+                        <h6 class="fw-bold mb-1">Engenharia Civil</h6>
+                        <p class="text-muted small">Vasta experiência em execução de obras, projetos estruturais e regularização técnica.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h6 class="fw-bold mb-1">Segurança do Trabalho (NRs)</h6>
+                        <p class="text-muted small">Especialista em Normas Regulamentadoras, com foco em treinamentos operacionais e conformidade legal.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h6 class="fw-bold mb-1">Sistemas & IA</h6>
+                        <p class="text-muted small">Desenvolvimento de soluções tecnológicas, APIs e integração de Inteligência Artificial para otimização de processos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h3 class="fw-bold mb-4">Nosso Compromisso</h3>
+                <div class="card border-0 shadow-sm p-4 bg-white rounded-4">
+                    <p class="mb-0 text-muted italic">"A MAZZ nasceu da necessidade de entregar clareza técnica e resultados práticos. Seja em um laudo de engenharia ou em uma apostila para concurso, nosso foco é a precisão e o sucesso de quem confia no nosso trabalho."</p>
+                    <footer class="blockquote-footer mt-3 mb-0">Márcio Oliveira, Fundador</footer>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="mt-auto pb-4 text-muted small text-center bg-light pt-4 border-top">
         <div>&copy; 2026 MAZZ. Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank" class="fw-bold text-success text-decoration-none">KM Engenharia & Tecnologia</a></div>
     </footer>
 
-    <a href="https://wa.me/5562996466033" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 10px #999;z-index:1000;" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" style="margin-top: 12px;"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
