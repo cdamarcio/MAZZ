@@ -13,13 +13,15 @@
         }
         .profile-img {
             width: 250px; height: 250px; object-fit: cover; border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 5px solid white;
             background-color: #eee;
         }
         .compromisso-card { border: none; border-left: 4px solid #0d6efd; background: #fff; transition: 0.3s; }
         .compromisso-card:hover { background: #f8f9fa; transform: translateX(5px); }
         .essencia-box { background: #001f3f; color: white; border-radius: 20px; padding: 40px; margin-top: 50px; }
         .highlight-text { color: #ffc107; font-weight: bold; }
+        .section-title { position: relative; padding-bottom: 10px; margin-bottom: 25px; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background: #0d6efd; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
@@ -50,58 +52,71 @@
     <main class="container my-5">
         <div class="row align-items-center g-5 mb-5">
             <div class="col-lg-4 text-center">
-                <img src="3x4-IA6.png" alt="Márcio Oliveira" class="profile-img mb-4">
+                <img src="3x4-IA6.png" alt="Márcio Rodrigues de Oliveira" class="profile-img mb-4">
                 <h3 class="fw-bold mb-0">Márcio Oliveira</h3>
                 <p class="text-primary fw-bold">Fundador & Diretor Técnico</p>
+                <div class="mt-2">
+                    <span class="badge bg-secondary">Engenheiro Civil</span>
+                    <span class="badge bg-secondary">Matemático</span>
+                    <span class="badge bg-secondary">TI</span>
+                </div>
             </div>
             <div class="col-lg-8">
-                <h2 class="fw-bold text-dark mb-4">Nosso Compromisso</h2>
+                <h2 class="fw-bold text-dark section-title">Nosso Compromisso</h2>
                 <p class="lead text-muted">Na MAZZ, compromisso não é apenas uma declaração institucional — é um princípio operacional que orienta cada decisão, cada projeto e cada entrega.</p>
-                <p class="text-muted">Desde nossa fundação, em <strong>2025</strong>, em <strong>Goiânia–GO</strong> (Setor Jardim Balneário Meia Ponte), estruturamos nossa atuação com base em responsabilidade técnica, excelência educacional e foco absoluto em resultados. Assumimos o compromisso de oferecer soluções que realmente gerem impacto.</p>
+                <p class="text-muted">Desde nossa fundação, em <strong>2025</strong>, em <strong>Goiânia–GO</strong> (Setor Jardim Balneário Meia Ponte), estruturamos nossa atuação com base em responsabilidade técnica, excelência educacional e foco absoluto em resultados. Assumimos o compromisso de oferecer soluções que realmente gerem impacto, seja na formação profissional, na aprovação em concursos ou na execução de projetos de engenharia.</p>
             </div>
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-6">
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
                 <div class="card compromisso-card p-4 shadow-sm h-100">
                     <h5 class="fw-bold text-primary">1. Excelência Técnica</h5>
                     <p class="small text-muted mb-0">Trabalhamos com padrões elevados e fundamentação sólida. Não entregamos conteúdo superficial. Entregamos preparo consistente.</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card compromisso-card p-4 shadow-sm h-100">
                     <h5 class="fw-bold text-primary">2. Resultados Mensuráveis</h5>
                     <p class="small text-muted mb-0">Nosso foco é performance: Aprovação, empregabilidade e evolução de carreira. Resultado não é promessa, é direcionamento estratégico.</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card compromisso-card p-4 shadow-sm h-100">
                     <h5 class="fw-bold text-primary">3. Ética e Transparência</h5>
                     <p class="small text-muted mb-0">Relações pautadas na integridade e clareza. Confiança é construída com consistência e respeito aos prazos.</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card compromisso-card p-4 shadow-sm h-100">
                     <h5 class="fw-bold text-primary">4. Inovação e Atualização</h5>
                     <p class="small text-muted mb-0">Integramos Engenharia, SST e TI de forma estratégica. Acreditamos que evolução é obrigação, não diferencial.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-8">
+                <div class="card compromisso-card p-4 shadow-sm h-100">
+                    <h5 class="fw-bold text-primary">5. Desenvolvimento Humano</h5>
+                    <p class="small text-muted mb-0">Formar profissionais vai além de transmitir conteúdo. Desenvolvemos disciplina, pensamento estratégico e mentalidade de alto desempenho.</p>
                 </div>
             </div>
         </div>
 
         <div class="essencia-box shadow-lg">
             <div class="row align-items-center">
-                <div class="col-lg-7">
+                <div class="col-lg-7 text-center text-lg-start">
                     <h2 class="fw-bold mb-4">Nossa Essência</h2>
-                    <p>Sob a liderança de <span class="highlight-text">Márcio Oliveira</span> — professor, analista de sistemas, matemático e engenheiro civil com mais de 20 anos de experiência em TI — a MAZZ opera com visão multidisciplinar e cultura de alta performance.</p>
-                    <p class="mb-0">Atuamos para transformar trajetórias profissionais com responsabilidade, estratégia e excelência.</p>
+                    <p class="fs-5">Sob a liderança de <span class="highlight-text">Márcio Oliveira</span> — professor, analista de sistemas, matemático e engenheiro civil com mais de 20 anos de experiência em Tecnologia da Informação — a MAZZ opera com visão multidisciplinar, rigor técnico e cultura de alta performance.</p>
+                    <p class="mb-0">A MAZZ não atua apenas para ensinar ou executar. Atua para transformar trajetórias profissionais com responsabilidade, estratégia e excelência.</p>
                 </div>
                 <div class="col-lg-5 text-center mt-4 mt-lg-0">
-                    <ul class="list-unstyled fw-bold fs-5">
-                        <li class="mb-2">✅ Entregar Qualidade</li>
-                        <li class="mb-2">✅ Gerar Resultado</li>
-                        <li class="mb-2">✅ Construir Credibilidade</li>
-                        <li>✅ Promover Crescimento</li>
-                    </ul>
+                    <div class="bg-white text-dark p-4 rounded-4 shadow-sm">
+                        <ul class="list-unstyled fw-bold mb-0 text-start">
+                            <li class="mb-2">🚀 Entregar Qualidade</li>
+                            <li class="mb-2">📈 Gerar Resultado</li>
+                            <li class="mb-2">🛡️ Construir Credibilidade</li>
+                            <li>🌱 Promover Crescimento Real</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
