@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso Couto Magalhães 2026 - MAZZ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; }
+        body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: var(--mazz-dark); }
+        
+        .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; }
+        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; text-decoration: none; }
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; }
+        .nav-link:hover { color: var(--mazz-gold) !important; }
+
+        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); text-align: center; }
+        
+        .info-card { background: white; border-radius: 15px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 30px; margin-bottom: 30px; }
+        .section-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin-bottom: 25px; text-transform: uppercase; }
+        
+        .feature-box { background: #f1f4f7; padding: 20px; border-radius: 10px; text-align: center; height: 100%; border: 1px solid #e1e8ed; }
+        .feature-box i { font-size: 2rem; color: var(--mazz-blue); margin-bottom: 15px; display: block; }
+        .feature-title { font-weight: 800; color: var(--mazz-blue); font-size: 1rem; margin-bottom: 10px; }
+
+        .btn-cta { background-color: #25d366; color: white !important; font-weight: 800; padding: 20px; border-radius: 10px; text-transform: uppercase; font-size: 1.2rem; transition: 0.3s; border: none; width: 100%; display: block; text-decoration: none; text-align: center; }
+        .btn-cta:hover { background-color: #128c7e; transform: scale(1.02); }
+
+        .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MAZZ</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-uppercase">Prefeitura de Couto Magalhães</h1>
+            <p class="lead">Preparatório Completo para o Concurso 2026</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="info-card">
+                    <h2 class="section-title">Sobre o Preparatório</h2>
+                    <p>Prepare-se de forma eficiente para o concurso municipal de Couto Magalhães com nossa metodologia focada em resultados. Nosso material é atualizado de acordo com as bancas examinadoras mais frequentes na região.</p>
+                    
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <span class="feature-title">📚 APOSTILAS</span>
+                                <p class="small mb-0">Conteúdo teórico resumido e focado no edital.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <span class="feature-title">✍️ EXERCÍCIOS</span>
+                                <p class="small mb-0">Centenas de questões para fixação do conteúdo.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <span class="feature-title">💻 SIMULADOS</span>
+                                <p class="small mb-0">Simulados online para testar seu desempenho real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2 class="section-title">Conteúdo Programático</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">✅ Língua Portuguesa</li>
+                        <li class="list-group-item">✅ Matemática e Raciocínio Lógico</li>
+                        <li class="list-group-item">✅ Conhecimentos Gerais e Regional</li>
+                        <li class="list-group-item">✅ Noções de Informática</li>
+                        <li class="list-group-item">✅ Legislação Municipal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="info-card text-center border border-warning">
+                    <h4 class="fw-bold mb-3">Garanta sua Vaga!</h4>
+                    <p class="text-muted mb-4">Acesso imediato ao material digital após a confirmação.</p>
+                    <a href="https://wa.me/5562996466033" class="btn-cta">
+                        Adquirir Material
+                    </a>
+                    <p class="mt-3 small text-muted">Dúvidas? Fale com nossa equipe técnica.</p>
+                </div>
+
+                <div class="info-card bg-dark text-white text-center">
+                    <h5 class="fw-bold text-warning">EDITAL 2026</h5>
+                    <p class="mb-0">Material 100% atualizado conforme as últimas movimentações do certame.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mazz-footer">
+        <div class="container">
+            <div class="fw-bold">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
+            <div class="mt-2 small text-muted">Desenvolvido por: KM Engenharia & Tecnologia</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
