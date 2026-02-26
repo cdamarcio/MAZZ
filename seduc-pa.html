@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso SEDUC-PA 2026 - MAZZ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mazz-blue: #001f3f;
+            --mazz-gold: #ffc107;
+            --mazz-dark: #00152b;
+            --mazz-gray: #6c757d;
+        }
+
+        body { 
+            padding-top: 85px; 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f4f7f9;
+            color: var(--mazz-dark);
+        }
+
+        /* NAVBAR PREMIUM */
+        .navbar {
+            background: rgba(0, 31, 63, 0.98) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 4px solid var(--mazz-gold);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .navbar-brand { font-size: 1.8rem; font-weight: 800; color: white !important; }
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
+
+        /* HEADER */
+        .page-header {
+            background: linear-gradient(135deg, #0f5132 0%, #198754 100%);
+            color: white;
+            padding: 60px 0;
+            border-bottom: 5px solid var(--mazz-gold);
+        }
+
+        /* DESTAQUE PROMOCIONAL */
+        .promo-card {
+            background: white;
+            border-radius: 20px;
+            border: none;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .promo-badge {
+            background: var(--mazz-gold);
+            color: var(--mazz-blue);
+            font-weight: 800;
+            padding: 10px 25px;
+            border-radius: 0 0 20px 0;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-promo {
+            background: #198754;
+            color: white !important;
+            font-weight: 800;
+            border: none;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn-promo:hover {
+            background: #146c43;
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(25, 135, 84, 0.3);
+        }
+
+        /* FOOTER */
+        .mazz-footer {
+            background-color: #f9f9f9;
+            padding: 40px 0 20px;
+            border-top: 1px solid #ececec;
+            margin-top: auto;
+        }
+        .footer-copyright { font-weight: 700; color: var(--mazz-dark); }
+        .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
+        .footer-dev { font-size: 0.8rem; color: var(--mazz-gray); }
+        .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MAZZ</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="concursos.html">Concursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">SEDUC-PA 2026</h1>
+            <p class="lead opacity-75">Sua vaga na rede estadual de ensino começa aqui.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+        
+        <div class="promo-card mb-5">
+            <div class="promo-badge">✍️ Especialista em Redação</div>
+            <div class="p-4 p-md-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 text-start">
+                        <h2 class="fw-bold mb-3">Redação Estratégica SEDUC</h2>
+                        <p class="text-muted fs-5">Domine a técnica de redação para a SEDUC-PA com nosso <strong>Curso Prático + Temas Comentados</strong>. Material focado nas competências exigidas para profissionais da educação.</p>
+                    </div>
+                    <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                        <a href="https://mazz.herospark.co/redacao-concurso-2026-seduc-pa" target="_blank" class="btn btn-promo btn-lg w-100 py-3 shadow">Adquirir Material</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-start mt-5">
+            <h3 class="fw-bold text-success mb-4">Por que estudar com a MAZZ?</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-3 border-0 shadow-sm h-100">
+                        <h5 class="fw-bold">Foco no Pará</h5>
+                        <p class="small text-muted mb-0">Materiais baseados na realidade e banca dos concursos paraenses.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 border-0 shadow-sm h-100">
+                        <h5 class="fw-bold">Pedagogia de Elite</h5>
+                        <p class="small text-muted mb-0">Teoria e exercícios sobre as principais leis (LDB, BNCC) e autores.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 border-0 shadow-sm h-100">
+                        <h5 class="fw-bold">Atualização 2026</h5>
+                        <p class="small text-muted mb-0">Material revisado e preparado para o próximo edital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mazz-footer text-center">
+        <div class="container">
+            <div class="footer-copyright">
+                &copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-dev">
+                Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
