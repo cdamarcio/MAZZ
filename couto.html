@@ -3,42 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concurso Couto Magalhães 2026 - MAZZ</title>
+    <title>Couto Magalhães 2026 - MAZZ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; }
-        body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: var(--mazz-dark); }
+        body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #f4f7f9; color: var(--mazz-dark); }
         
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; }
         .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; text-decoration: none; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; }
         .nav-link:hover { color: var(--mazz-gold) !important; }
 
-        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); text-align: center; }
-        
-        .info-card { background: white; border-radius: 15px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 30px; margin-bottom: 30px; }
-        .section-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin-bottom: 25px; text-transform: uppercase; }
-        
-        .feature-box { background: #f1f4f7; padding: 20px; border-radius: 10px; text-align: center; height: 100%; border: 1px solid #e1e8ed; }
-        .feature-box i { font-size: 2rem; color: var(--mazz-blue); margin-bottom: 15px; display: block; }
-        .feature-title { font-weight: 800; color: var(--mazz-blue); font-size: 1rem; margin-bottom: 10px; }
+        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 40px 0; border-bottom: 5px solid var(--mazz-gold); text-align: center; }
+        .search-container { background: white; padding: 25px 0; border-bottom: 1px solid #eee; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .search-input { border: 2px solid var(--mazz-blue); border-radius: 50px; padding: 12px 25px; font-weight: 600; outline: none; max-width: 600px; margin: 0 auto; }
 
-        .btn-cta { background-color: #25d366; color: white !important; font-weight: 800; padding: 20px; border-radius: 10px; text-transform: uppercase; font-size: 1.2rem; transition: 0.3s; border: none; width: 100%; display: block; text-decoration: none; text-align: center; }
-        .btn-cta:hover { background-color: #128c7e; transform: scale(1.02); }
+        .trilha-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; font-size: 1.1rem; }
+        
+        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; position: relative; }
+        .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
+        .course-title { font-weight: 700; font-size: 0.85rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
+        
+        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; border: none; padding: 10px; margin-top: auto; text-decoration: none; }
+        .btn-buy:hover { background-color: var(--mazz-dark); }
 
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
     </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MAZZ</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
                     <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
                 </ul>
             </div>
@@ -47,68 +49,20 @@
 
     <header class="page-header">
         <div class="container">
-            <h1 class="display-5 fw-bold text-uppercase">Prefeitura de Couto Magalhães</h1>
-            <p class="lead">Preparatório Completo para o Concurso 2026</p>
+            <h1 class="display-6 fw-bold text-uppercase">Couto Magalhães 2026</h1>
+            <p class="lead opacity-75">Materiais Específicos: Apostilas, Exercícios e Simulados</p>
         </div>
     </header>
 
-    <main class="container my-5">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="info-card">
-                    <h2 class="section-title">Sobre o Preparatório</h2>
-                    <p>Prepare-se de forma eficiente para o concurso municipal de Couto Magalhães com nossa metodologia focada em resultados. Nosso material é atualizado de acordo com as bancas examinadoras mais frequentes na região.</p>
-                    
-                    <div class="row g-4 mt-2">
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <span class="feature-title">📚 APOSTILAS</span>
-                                <p class="small mb-0">Conteúdo teórico resumido e focado no edital.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <span class="feature-title">✍️ EXERCÍCIOS</span>
-                                <p class="small mb-0">Centenas de questões para fixação do conteúdo.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <span class="feature-title">💻 SIMULADOS</span>
-                                <p class="small mb-0">Simulados online para testar seu desempenho real.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <h2 class="section-title">Conteúdo Programático</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">✅ Língua Portuguesa</li>
-                        <li class="list-group-item">✅ Matemática e Raciocínio Lógico</li>
-                        <li class="list-group-item">✅ Conhecimentos Gerais e Regional</li>
-                        <li class="list-group-item">✅ Noções de Informática</li>
-                        <li class="list-group-item">✅ Legislação Municipal</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="info-card text-center border border-warning">
-                    <h4 class="fw-bold mb-3">Garanta sua Vaga!</h4>
-                    <p class="text-muted mb-4">Acesso imediato ao material digital após a confirmação.</p>
-                    <a href="https://wa.me/5562996466033" class="btn-cta">
-                        Adquirir Material
-                    </a>
-                    <p class="mt-3 small text-muted">Dúvidas? Fale com nossa equipe técnica.</p>
-                </div>
-
-                <div class="info-card bg-dark text-white text-center">
-                    <h5 class="fw-bold text-warning">EDITAL 2026</h5>
-                    <p class="mb-0">Material 100% atualizado conforme as últimas movimentações do certame.</p>
-                </div>
-            </div>
+    <section class="search-container sticky-top" style="top: 80px; z-index: 999;">
+        <div class="container text-center">
+            <input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Digite seu cargo (ex: Enfermagem, Professor, Fiscal...)">
         </div>
+    </section>
+
+    <main class="container mb-5 flex-grow-1">
+        <div id="conteudo-container"></div>
+        <div id="noResults" class="text-center py-5 d-none"><h4>Nenhum material encontrado para esta busca.</h4></div>
     </main>
 
     <footer class="mazz-footer">
@@ -119,5 +73,90 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const materiais = [
+            { cat: "📚 CONHECIMENTOS BÁSICOS E REDAÇÃO", itens: [
+                { nome: "Apostila Conhecimentos Básicos - Nível Médio (Todos os Cargos)", link: "https://mazz.herospark.co/medio-todos-os-cargos-apostila-conhecimentos-basicos-concurso-2026-do-couto-magalhães" },
+                { nome: "Apostila Conhecimentos Básicos - Nível Superior (Todos os Cargos)", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-todos-os-cargos-de-nivel-superior-apostila-conhecimentos-basicos" },
+                { nome: "Curso de Redação Específico - Couto Magalhães", link: "https://mazz.herospark.co/redacao-concurso-2026-do-couto-magalhaes" },
+                { nome: "Plataforma Aprenda - MAZZ", link: "https://mazz.herospark.co/aprenda" }
+            ]},
+            { cat: "🏥 SAÚDE (ESPECÍFICOS E SIMULADOS)", itens: [
+                { nome: "Técnico em Enfermagem - Apostila Específica", link: "https://mazz.herospark.co/medio-tecnico-em-enfermagem-especifico-concurso-2026-do-couto-magalhaes" },
+                { nome: "Técnico em Enfermagem - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-tecnico-em-enfermagem-simulado" },
+                { nome: "Enfermeiro - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-enfermeiro-simulado" },
+                { nome: "Dentista - Simulado", link: "https://mazz.herospark.co/dentista-simulado-concurso-2026-do-couto-magalhaes" },
+                { nome: "Biomédico - Simulado", link: "https://mazz.herospark.co/biomedico-simulado-concurso-2026-do-couto-magalhaes" },
+                { nome: "Psicólogo - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-nivel-superior-psicologo-simulado" },
+                { nome: "Assistente Social - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-assistente-social-simulado" },
+                { nome: "Educador Físico da Saúde - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-educador-fisico-da-saude-simulado" },
+                { nome: "Técnico em Higiene Dental - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-tecnico-em-higiene-dental-simulado" }
+            ]},
+            { cat: "🍎 EDUCAÇÃO (ESPECÍFICOS E SIMULADOS)", itens: [
+                { nome: "Pedagogo - Apostila Específica", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-professor-de-nivel-superior-pedagogo-apostila-especifica" },
+                { nome: "Professor de Pedagogia - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-professor-de-pedagogia-simulado" },
+                { nome: "Agente de Apoio Educacional - Apostila Específica", link: "https://mazz.herospark.co/medio-agente-de-apoio-educacional-especifico-concurso-2026-do-couto-magalhaes" },
+                { nome: "Agente de Apoio Educacional - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-agente-de-apoio-educacional-smulado" },
+                { nome: "Professor de História - Apostila Específica", link: "https://mazz.herospark.co/professor-de-historia-especifica-concurso-2026-do-couto-magalhaes" },
+                { nome: "Professor de História - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-professor-de-historia-simulado" },
+                { nome: "Professor de Matemática - Simulado", link: "https://mazz.herospark.co/professor-de-matematica-simulado-concurso-2026-do-couto-magalhaes" },
+                { nome: "Professor de Artes - Apostila Específica", link: "https://mazz.herospark.co/professor-de-artes-especifica-concurso-2026-do-couto-magalhaes" },
+                { nome: "Professor de Artes - Simulado", link: "https://mazz.herospark.co/professor-de-artes-simulado-concurso-2026-do-couto-magalhaes" }
+            ]},
+            { cat: "🏢 ADMINISTRATIVO E FISCAL", itens: [
+                { nome: "Assistente Administrativo - Apostila Específica", link: "https://mazz.herospark.co/medio-assistente-administrativo-especifico-concurso-2026-do-couto-magalhaes" },
+                { nome: "Assistente Administrativo - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-assistente-administrativo-simulado" },
+                { nome: "Analista Administrativo - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-analista-administrativo-simulado" },
+                { nome: "Fiscal Sanitário - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-fiscal-sanitario-simulado" },
+                { nome: "Fiscal de Obras, Postura e Serviços - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-fiscal-de-obras-postura-e-servicos-simulado" },
+                { nome: "Fiscal Ambiental - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-fiscal-ambiental-simulado" },
+                { nome: "Técnico em Informática - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-tecnico-em-informatica-smulado" },
+                { nome: "Técnico Agropecuário - Simulado", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-tecnico-agropecuario-simulado" }
+            ]},
+            { cat: "⚒️ NÍVEL FUNDAMENTAL E OPERACIONAL", itens: [
+                { nome: "ASG, Gari, Merendeira e Motorista - Apostila + 100 Exercícios", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-auxiliar-de-servicos-gerais-gari-merendeira-motorista-apostila-100-exercicios-de-fixacao" },
+                { nome: "ASG, Gari, Merendeira, Motorista e Vigia - Material Completo", link: "https://mazz.herospark.co/concurso-2026-do-couto-magalhaes-auxiliar-de-servicos-gerais-gari-merendeira-motorista-categoria-vigia" }
+            ]}
+        ];
+
+        const container = document.getElementById('conteudo-container');
+
+        function render(filtro = "") {
+            container.innerHTML = "";
+            let encontradoTotal = 0;
+
+            materiais.forEach(trilha => {
+                let cardsHtml = "";
+                let countTrilha = 0;
+
+                trilha.itens.forEach(item => {
+                    if (item.nome.toLowerCase().includes(filtro.toLowerCase())) {
+                        cardsHtml += `
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="nr-card">
+                                    <div class="course-title">${item.nome}</div>
+                                    <a href="${item.link}" target="_blank" class="btn-buy">Acessar Material</a>
+                                </div>
+                            </div>`;
+                        countTrilha++;
+                        encontradoTotal++;
+                    }
+                });
+
+                if (countTrilha > 0) {
+                    container.innerHTML += `
+                        <div class="mb-5">
+                            <h2 class="trilha-title">${trilha.cat}</h2>
+                            <div class="row g-3">${cardsHtml}</div>
+                        </div>`;
+                }
+            });
+
+            document.getElementById('noResults').classList.toggle('d-none', encontradoTotal > 0);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => render(e.target.value));
+        render();
+    </script>
 </body>
 </html>
