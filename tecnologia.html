@@ -3,60 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologia e Inovação - MAZZ</title>
+    <title>Tecnologia - MAZZ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; }
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
-        .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; }
-        .navbar-brand { font-size: 1.8rem; font-weight: 800; color: white !important; }
-        .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; }
+        .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
         .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); }
-        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; text-align: center; }
-        .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .btn-buy { background-color: var(--mazz-blue); color: white; font-size: 0.75rem; font-weight: 700; width: 100%; margin-top: 15px; border: none; padding: 10px; border-radius: 6px; text-decoration: none; display: inline-block; }
-        .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue); }
-        .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: auto; text-align: center; }
+        .course-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 25px; height: 100%; display: flex; flex-direction: column; text-align: center; }
+        .course-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
+        .btn-course { background-color: var(--mazz-blue); color: white; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 12px; transition: 0.3s; text-decoration: none; display: inline-block; margin-top: auto; }
+        .btn-course:hover { background-color: var(--mazz-gold); color: var(--mazz-blue); }
+        .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container"><a class="navbar-brand" href="index.html">MAZZ</a></div>
-    </nav>
-    <header class="page-header text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">TECNOLOGIA</h1>
-            <p class="lead opacity-75">Desenvolvimento, Programação e Inovação Digital.</p>
-        </div>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="index.html">MAZZ</a></div></nav>
+    <header class="page-header text-center"><div class="container"><h1 class="display-4 fw-bold">TECNOLOGIA</h1><p class="lead opacity-75">Sistemas, APIs e Inovação Digital.</p></div></header>
     <main class="container my-5 flex-grow-1">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="nr-card">
-                    <h5 class="fw-bold">Python para Iniciantes</h5>
-                    <p class="text-muted small">Aprenda a linguagem mais versátil do mercado.</p>
-                    <a href="https://mazz.herospark.co/p/tecnologia" class="btn-buy">Ver Detalhes</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="nr-card">
-                    <h5 class="fw-bold">FastAPI e REST APIs</h5>
-                    <p class="text-muted small">Criação de APIs de alta performance com Python.</p>
-                    <a href="https://mazz.herospark.co/p/tecnologia" class="btn-buy">Ver Detalhes</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="nr-card">
-                    <h5 class="fw-bold">Gestão de Dados</h5>
-                    <p class="text-muted small">Bancos de dados e infraestrutura moderna.</p>
-                    <a href="https://mazz.herospark.co/p/tecnologia" class="btn-buy">Ver Detalhes</a>
-                </div>
-            </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4"><div class="course-card"><h5>Python & Django</h5><p class="text-muted small">Criação de sistemas robustos e escaláveis para web.</p><a href="https://mazz.herospark.co/p/tecnologia" class="btn-course">Ver Curso</a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="course-card"><h5>FastAPI e REST APIs</h5><p class="text-muted small">Desenvolvimento de back-end moderno e de alta performance.</p><a href="https://mazz.herospark.co/p/tecnologia" class="btn-course">Ver Curso</a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="course-card"><h5>Bancos de Dados SQL</h5><p class="text-muted small">Modelagem e gestão de dados com foco em segurança.</p><a href="https://mazz.herospark.co/p/tecnologia" class="btn-course">Ver Curso</a></div></div>
         </div>
     </main>
-    <footer class="mazz-footer">
-        <div class="container"><div class="fw-bold">&copy; 2026 MAZZ. Goiânia - GO.</div></div>
-    </footer>
+    <footer class="mazz-footer"><div class="container">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div></footer>
 </body>
 </html>
