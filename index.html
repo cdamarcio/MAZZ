@@ -1,13 +1,257 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mazz</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZZ - Excelência em Soluções Técnicas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mazz-blue: #001f3f;
+            --mazz-gold: #ffc107;
+            --mazz-dark: #00152b;
+            --mazz-gray: #6c757d;
+            --mazz-light: #f8f9fa;
+        }
+
+        body { 
+            padding-top: 85px; 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff;
+            color: var(--mazz-dark);
+        }
+
+        /* NAVBAR PREMIUM */
+        .navbar {
+            background: rgba(0, 31, 63, 0.98) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 4px solid var(--mazz-gold);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin: 0 10px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--mazz-gold) !important;
+        }
+
+        /* HERO SECTION */
+        .hero-section { 
+            background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); 
+            color: white; 
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-title { font-weight: 800; font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+
+        /* CARDS */
+        .feature-card {
+            border: 1px solid #eee;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            background: #fff;
+            padding: 40px !important;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--mazz-gold);
+        }
+
+        /* SEÇÃO DE DEPOIMENTOS */
+        .testimonials-section {
+            background-color: var(--mazz-light);
+            padding: 80px 0;
+        }
+
+        .testimonial-item {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--mazz-gray);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--mazz-gold);
+            position: absolute;
+            top: -30px;
+            left: -10px;
+            opacity: 0.3;
+        }
+
+        .user-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid var(--mazz-gold);
+        }
+
+        .user-name { font-weight: 800; color: var(--mazz-blue); margin-bottom: 0; }
+        .user-role { font-size: 0.8rem; color: var(--mazz-gray); }
+
+        /* RODAPÉ MAZZ */
+        .mazz-footer {
+            background-color: #f9f9f9;
+            padding: 50px 0 30px;
+            border-top: 1px solid #ececec;
+            margin-top: auto;
+        }
+
+        .footer-copyright { color: var(--mazz-dark); font-weight: 700; font-size: 1.1rem; }
+        .footer-divider { width: 60px; height: 3px; background: var(--mazz-gold); margin: 20px auto; }
+        .footer-dev { font-size: 0.85rem; color: var(--mazz-gray); }
+        .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MAZZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="hero-title">ENGENHARIA, EDUCAÇÃO<br>& TECNOLOGIA</h1>
+            <p class="lead mb-5 opacity-75 fs-4">Soluções multidisciplinares com rigor técnico e foco em resultados.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="cursos.html" class="btn btn-warning btn-lg fw-bold px-5 py-3 shadow">VER CURSOS</a>
+                <a href="laudos.html" class="btn btn-outline-light btn-lg fw-bold px-5 py-3">ENGENHARIA</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5 py-5 flex-grow-1 text-center">
+        <div class="row g-5">
+            <div class="col-md-4">
+                <div class="card h-100 feature-card">
+                    <h3 class="fw-bold mb-3">Educação</h3>
+                    <p class="text-muted small">Cursos e NRs com certificação profissional em todo o Brasil.</p>
+                    <a href="cursos.html" class="btn btn-link text-primary fw-bold text-decoration-none mt-auto">Acessar &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 feature-card">
+                    <h3 class="fw-bold mb-3">Engenharia</h3>
+                    <p class="text-muted small">Laudos, vistorias e consultoria técnica especializada.</p>
+                    <a href="laudos.html" class="btn btn-link text-primary fw-bold text-decoration-none mt-auto">Acessar &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 feature-card">
+                    <h3 class="fw-bold mb-3">Concursos</h3>
+                    <p class="text-muted small">Materiais de elite para sua aprovação em alto nível.</p>
+                    <a href="concursos.html" class="btn btn-link text-primary fw-bold text-decoration-none mt-auto">Acessar &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" style="color: var(--mazz-blue);">O QUE DIZEM NOSSOS CLIENTES</h2>
+                <div class="footer-divider"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">O material para o concurso da SEFA-PA foi o diferencial na minha preparação. Conteúdo direto ao ponto e muito atualizado.</p>
+                        <div class="user-info d-flex align-items-center">
+                            <img src="https://ui-avatars.com/api/?name=Ricardo+Souza&background=001f3f&color=fff" alt="Cliente">
+                            <div>
+                                <h6 class="user-name">Ricardo Souza</h6>
+                                <p class="user-role">Aluno de Concursos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">Precisava de um laudo técnico de urgência para minha obra e a MAZZ resolveu tudo com muita competência e agilidade.</p>
+                        <div class="user-info d-flex align-items-center">
+                            <img src="https://ui-avatars.com/api/?name=Ana+Paula&background=001f3f&color=fff" alt="Cliente">
+                            <div>
+                                <h6 class="user-name">Ana Paula</h6>
+                                <p class="user-role">Engenharia Civil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">A consultoria acadêmica me ajudou muito na estruturação da minha tese. O suporte metodológico é de altíssimo nível.</p>
+                        <div class="user-info d-flex align-items-center">
+                            <img src="https://ui-avatars.com/api/?name=Felipe+Moraes&background=001f3f&color=fff" alt="Cliente">
+                            <div>
+                                <h6 class="user-name">Felipe Moraes</h6>
+                                <p class="user-role">Mestrando</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mazz-footer text-center">
+        <div class="container">
+            <div class="footer-copyright">
+                &copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-dev">
+                Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
