@@ -7,25 +7,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; }
+        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; --mazz-light: #f8f9fa; }
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
-        .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; }
-        .navbar-brand { font-size: 1.8rem; font-weight: 800; color: white !important; }
-        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); }
-        .course-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 25px; height: 100%; text-align: center; display: flex; flex-direction: column; }
-        .btn-course { background-color: var(--mazz-blue); color: white; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; padding: 12px; text-decoration: none; margin-top: auto; }
+        .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
+        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); margin-bottom: 40px; }
+        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
+        .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
+        .category-label { background: var(--mazz-light); color: var(--mazz-blue); font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; align-self: center; margin-bottom: 10px; text-transform: uppercase; }
+        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
+        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
+        .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
+        .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
+        .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
+        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; }
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="index.html">MAZZ</a></div></nav>
-    <header class="page-header text-center"><div class="container"><h1 class="display-4 fw-bold">ENGENHARIAS</h1><p class="lead opacity-75">Engenharia Diagnóstica e Atualização Técnica Profissional.</p></div></header>
-    <main class="container my-5 flex-grow-1">
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-4"><div class="course-card"><h5>Perícias e Laudos</h5><p class="text-muted small">Domine a elaboração de laudos periciais e vistorias cautelares.</p><a href="https://mazz.herospark.co/p/engenharias" class="btn-course">Ver Curso</a></div></div>
-            <div class="col-md-6 col-lg-4"><div class="course-card"><h5>Engenharia Ambiental</h5><p class="text-muted small">Licenciamento e consultoria técnica ambiental para empresas.</p><a href="https://mazz.herospark.co/p/engenharias" class="btn-course">Ver Curso</a></div></div>
-        </div>
-    </main>
-    <footer class="mazz-footer"><div class="container">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div></footer>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="index.html">MAZZ</a><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto text-center"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li><li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li><li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li><li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li><li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li><li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li></ul></div></div></nav>
+    <header class="page-header text-center"><div class="container"><h1 class="display-4 fw-bold">ENGENHARIAS</h1><p class="lead opacity-75">Capacitação técnica avançada em engenharia e perícias.</p></div></header>
+    <main class="container mb-5 flex-grow-1"><div id="cursos-container" class="row g-3 justify-content-center"></div></main>
+    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 rounded-4 shadow"><div class="modal-header rounded-top-4"><h5 class="modal-title" id="modalTitulo">CURSO</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body p-4"><div class="ch-badge">⏱ Carga Horária: 40 Horas</div><h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6><ul id="modalEmenta" class="list-unstyled"></ul><a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR VALOR NO WHATSAPP</a></div></div></div></div>
+    <footer class="mazz-footer"><div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cursosEng = [
+            { t: "Patologia das Construções", c: "Civil" }, { t: "Vistoria de Vizinhança", c: "Perícia" }, { t: "Engenharia de Avaliações", c: "Perícia" },
+            { t: "Licenciamento Ambiental Pro", c: "Ambiental" }, { t: "Leitura de Projetos Estruturais", c: "Civil" }, { t: "Gerenciamento de Obras", c: "Gestão" },
+            { t: "Segurança em Andaimes", c: "SST" }, { t: "Cálculo de Fundações", c: "Civil" }, { t: "Sistemas de Impermeabilização", c: "Técnico" }, { t: "Orçamento de Obras com BIM", c: "Inovação" }
+        ];
+        const container = document.getElementById('cursos-container');
+        cursosEng.forEach((c, i) => { container.innerHTML += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card shadow-sm"><span class="category-label">${c.c}</span><h6 class="course-title">${c.t}</h6><button class="btn-buy" onclick="abrirEmenta(${i})">Consultar</button></div></div>`; });
+        function abrirEmenta(i) { const c = cursosEng[i]; document.getElementById('modalTitulo').innerText = c.t; document.getElementById('modalEmenta').innerHTML = `<li>• Módulo 1: Normas e Legislação</li><li>• Módulo 2: Procedimentos Técnicos de Campo</li><li>• Módulo 3: Elaboração de Laudos e Relatórios</li><li>• Módulo 4: Responsabilidade Técnica e ART</li>`; new bootstrap.Modal(document.getElementById('ementaModal')).show(); }
+    </script>
 </body>
 </html>

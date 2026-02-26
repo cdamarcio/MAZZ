@@ -3,140 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educação e Pedagogia - MAZZ</title>
+    <title>Educação & Pedagogia - MAZZ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --mazz-blue: #001f3f;
-            --mazz-gold: #ffc107;
-            --mazz-dark: #00152b;
-            --mazz-gray: #6c757d;
-            --mazz-light: #f8f9fa;
-        }
-
+        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; --mazz-light: #f8f9fa; }
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
-
-        /* NAVBAR PREMIUM */
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
-
-        /* HEADER */
-        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); }
-
-        /* CARDS DE CURSOS */
-        .course-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 25px; height: 100%; display: flex; flex-direction: column; text-align: center; }
-        .course-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-        .course-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
-        .course-title { font-weight: 800; color: var(--mazz-blue); font-size: 1.1rem; margin-bottom: 10px; min-height: 50px; display: flex; align-items: center; justify-content: center; }
-        .course-desc { font-size: 0.9rem; color: var(--mazz-gray); margin-bottom: 20px; flex-grow: 1; }
-        
-        .btn-course { background-color: var(--mazz-blue); color: white; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 12px; transition: 0.3s; text-decoration: none; display: inline-block; }
-        .btn-course:hover { background-color: var(--mazz-gold); color: var(--mazz-blue); }
-
-        .category-label { background: var(--mazz-gold); color: var(--mazz-blue); font-size: 0.65rem; font-weight: 800; padding: 3px 10px; border-radius: 50px; display: inline-block; margin-bottom: 10px; text-transform: uppercase; }
-
-        /* FOOTER */
+        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); margin-bottom: 40px; }
+        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
+        .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
+        .category-label { background: var(--mazz-light); color: var(--mazz-blue); font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; align-self: center; margin-bottom: 10px; text-transform: uppercase; }
+        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
+        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
+        .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
+        .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
+        .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
+        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; }
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
-        .footer-copyright { font-weight: 700; color: var(--mazz-dark); }
-        .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
-        .footer-dev { font-size: 0.8rem; color: var(--mazz-gray); }
-        .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">MAZZ</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li>
-                    <li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header class="page-header text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">EDUCAÇÃO</h1>
-            <p class="lead opacity-75">Formação docente, gestão escolar e metodologias de ensino inovadoras.</p>
-        </div>
-    </header>
-
-    <main class="container my-5 flex-grow-1">
-        
-        <div class="row g-4 justify-content-center">
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="course-card shadow-sm">
-                    <span class="course-icon">📖</span>
-                    <span class="category-label">Pedagogia</span>
-                    <h4 class="course-title">Metodologias Ativas de Aprendizagem</h4>
-                    <p class="course-desc">Aprenda a aplicar estratégias de ensino que colocam o aluno como protagonista do próprio conhecimento.</p>
-                    <a href="https://mazz.herospark.co/p/educacao" class="btn-course">Ver Detalhes</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="course-card shadow-sm">
-                    <span class="course-icon">🏫</span>
-                    <span class="category-label">Gestão</span>
-                    <h4 class="course-title">Gestão e Coordenação Escolar</h4>
-                    <p class="course-desc">Habilidades fundamentais para liderar equipes pedagógicas e administrar unidades de ensino com eficiência.</p>
-                    <a href="https://mazz.herospark.co/p/educacao" class="btn-course">Ver Detalhes</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="course-card shadow-sm">
-                    <span class="course-icon">💡</span>
-                    <span class="category-label">Educação 5.0</span>
-                    <h4 class="course-title">Tecnologias Educacionais na Prática</h4>
-                    <p class="course-desc">Domine ferramentas digitais para transformar suas aulas e engajar alunos na era da informação.</p>
-                    <a href="https://mazz.herospark.co/p/educacao" class="btn-course">Ver Detalhes</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="course-card shadow-sm">
-                    <span class="course-icon">🧩</span>
-                    <span class="category-label">Inclusão</span>
-                    <h4 class="course-title">Educação Especial e Inclusiva</h4>
-                    <p class="card-text course-desc">Estratégias para acolhimento e adaptação curricular para alunos com necessidades específicas.</p>
-                    <a href="https://mazz.herospark.co/p/educacao" class="btn-course">Ver Detalhes</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="course-card shadow-sm">
-                    <span class="course-icon">⚖️</span>
-                    <span class="category-label">Legislação</span>
-                    <h4 class="course-title">LDB e BNCC: Guia Prático</h4>
-                    <p class="course-desc">Entenda as diretrizes que regem a educação brasileira e como aplicá-las no planejamento escolar.</p>
-                    <a href="https://mazz.herospark.co/p/educacao" class="btn-course">Ver Detalhes</a>
-                </div>
-            </div>
-
-        </div>
-
-    </main>
-
-    <footer class="mazz-footer">
-        <div class="container">
-            <div class="footer-copyright">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
-            <div class="footer-divider"></div>
-            <div class="footer-dev">Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a></div>
-        </div>
-    </footer>
-
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="index.html">MAZZ</a><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto text-center"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li><li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li><li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li><li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li><li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li><li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li></ul></div></div></nav>
+    <header class="page-header text-center"><div class="container"><h1 class="display-4 fw-bold">EDUCAÇÃO & PEDAGOGIA</h1><p class="lead opacity-75">Formação continuada com foco em práticas pedagógicas modernas.</p></div></header>
+    <main class="container mb-5 flex-grow-1"><div id="cursos-container" class="row g-3 justify-content-center"></div></main>
+    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 rounded-4 shadow"><div class="modal-header rounded-top-4"><h5 class="modal-title" id="modalTitulo">CURSO</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body p-4"><div class="ch-badge">⏱ Carga Horária: 40 Horas</div><h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6><ul id="modalEmenta" class="list-unstyled"></ul><a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR VALOR NO WHATSAPP</a></div></div></div></div>
+    <footer class="mazz-footer"><div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cursosEdu = [
+            { t: "Metodologias Ativas", c: "Pedagogia" }, { t: "Gestão e Coordenação Escolar", c: "Gestão" }, { t: "Educação Especial Inclusiva", c: "Inclusão" },
+            { t: "Tecnologias Educacionais", c: "Inovação" }, { t: "Alfabetização e Letramento", c: "Docência" }, { t: "BNCC na Prática", c: "Normativa" },
+            { t: "Psicopedagogia Clínica", c: "Saúde" }, { t: "Ludicidade no Ensino", c: "Pedagogia" }, { t: "Direito Educacional", c: "Gestão" }, { t: "Avaliação da Aprendizagem", c: "Docência" }
+        ];
+        const container = document.getElementById('cursos-container');
+        cursosEdu.forEach((c, i) => { container.innerHTML += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card shadow-sm"><span class="category-label">${c.c}</span><h6 class="course-title">${c.t}</h6><button class="btn-buy" onclick="abrirEmenta(${i})">Consultar</button></div></div>`; });
+        function abrirEmenta(i) { const c = cursosEdu[i]; document.getElementById('modalTitulo').innerText = c.t; document.getElementById('modalEmenta').innerHTML = `<li>• Módulo 1: Fundamentos da área</li><li>• Módulo 2: Planejamento e Estratégias</li><li>• Módulo 3: Práticas de Sala de Aula</li><li>• Módulo 4: Avaliação e Resultados</li>`; new bootstrap.Modal(document.getElementById('ementaModal')).show(); }
+    </script>
 </body>
 </html>
