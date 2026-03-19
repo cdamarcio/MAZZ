@@ -1,16 +1,19 @@
 // footer.js
 const footerHTML = `
-    <footer style="text-align: center; padding: 40px 20px 100px 20px; color: #ffffff; font-family: sans-serif;">
-        <div style="margin-bottom: 25px;">
-            <a href="index.html" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid white; padding: 10px 30px; border-radius: 20px; text-decoration: none; font-size: 0.9em;">VOLTAR AO INÍCIO</a>
-        </div>
-        <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 MAZZ - Todos os direitos reservados.</p>
-        <p style="font-size: 0.7em; opacity: 0.4;">Desenvolvido por: RAZGO</p>
+    <a href="https://wa.me/5562996466033" target="_blank" 
+       style="position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+        <svg viewBox="0 0 32 32" style="width: 30px; height: 30px; fill: white;"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.475 2.021 7.787l-2.021 7.213 7.375-1.933c2.247 1.205 4.813 1.933 7.625 1.933 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.479 0-4.811-0.655-6.84-1.787l-0.491-0.272-4.363 1.144 1.168-4.167-0.3-0.48c-1.253-2.016-1.981-4.405-1.981-6.771 0-7.351 5.983-13.333 13.333-13.333 7.351 0 13.333 5.983 13.333 13.333s-5.983 13.333-13.333 13.333zM22.84 19.333c-0.373-0.187-2.208-1.088-2.549-1.213-0.341-0.125-0.589-0.187-0.837 0.187s-0.963 1.213-1.181 1.461-0.435 0.28-0.808 0.093c-0.373-0.187-1.579-0.581-3.008-1.856-1.112-0.992-1.861-2.216-2.08-2.589s-0.024-0.576 0.163-0.763c0.168-0.168 0.373-0.435 0.56-0.653 0.187-0.219 0.248-0.373 0.373-0.621s0.063-0.467-0.032-0.653c-0.093-0.187-0.837-2.019-1.147-2.763-0.301-0.725-0.608-0.627-0.837-0.637-0.216-0.011-0.464-0.013-0.712-0.013s-0.651 0.093-0.992 0.467c-0.341 0.373-1.304 1.275-1.304 3.107s1.336 3.605 1.523 3.853c0.187 0.248 2.629 4.016 6.368 5.627 0.888 0.384 1.584 0.613 2.125 0.784 0.893 0.283 1.707 0.243 2.349 0.147 0.715-0.107 2.208-0.901 2.52-1.771 0.312-0.869 0.312-1.616 0.219-1.771s-0.341-0.248-0.715-0.435z"></path></svg>
+    </a>
 
-        <a href="https://wa.me/5562996466033" target="_blank" 
-           style="position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none;">
-            <svg viewBox="0 0 32 32" style="width: 30px; height: 30px; fill: white;"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.475 2.021 7.787l-2.021 7.213 7.375-1.933c2.247 1.205 4.813 1.933 7.625 1.933 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.479 0-4.811-0.655-6.84-1.787l-0.491-0.272-4.363 1.144 1.168-4.167-0.3-0.48c-1.253-2.016-1.981-4.405-1.981-6.771 0-7.351 5.983-13.333 13.333-13.333 7.351 0 13.333 5.983 13.333 13.333s-5.983 13.333-13.333 13.333zM22.84 19.333c-0.373-0.187-2.208-1.088-2.549-1.213-0.341-0.125-0.589-0.187-0.837 0.187s-0.963 1.213-1.181 1.461-0.435 0.28-0.808 0.093c-0.373-0.187-1.579-0.581-3.008-1.856-1.112-0.992-1.861-2.216-2.08-2.589s-0.024-0.576 0.163-0.763c0.168-0.168 0.373-0.435 0.56-0.653 0.187-0.219 0.248-0.373 0.373-0.621s0.063-0.467-0.032-0.653c-0.093-0.187-0.837-2.019-1.147-2.763-0.301-0.725-0.608-0.627-0.837-0.637-0.216-0.011-0.464-0.013-0.712-0.013s-0.651 0.093-0.992 0.467c-0.341 0.373-1.304 1.275-1.304 3.107s1.336 3.605 1.523 3.853c0.187 0.248 2.629 4.016 6.368 5.627 0.888 0.384 1.584 0.613 2.125 0.784 0.893 0.283 1.707 0.243 2.349 0.147 0.715-0.107 2.208-0.901 2.52-1.771 0.312-0.869 0.312-1.616 0.219-1.771s-0.341-0.248-0.715-0.435z"></path></svg>
-        </a>
+    <footer style="text-align: center; padding: 40px 20px; color: #ffffff; background-color: #00162d; margin-top: 60px; font-family: sans-serif; border-top: 2px solid rgba(255,255,255,0.1); width: 100%;">
+        <div style="margin-bottom: 30px;">
+            <a href="index.html" style="background: white; color: #001f3f; padding: 12px 35px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 0.9em; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">VOLTAR AO INÍCIO</a>
+        </div>
+        
+        <p style="font-size: 0.85em; opacity: 0.7; margin: 0;">&copy; 2026 MAZZ - Todos os direitos reservados.</p>
+        <div style="margin-top: 15px; font-size: 0.75em; opacity: 0.5;">
+            Desenvolvido por: <a href="http://www.razgo.com.br" target="_blank" style="color: #4CAF50; text-decoration: none; font-weight: bold;">RAZGO</a>
+        </div>
     </footer>
 `;
 
