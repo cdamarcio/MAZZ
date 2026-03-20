@@ -10,17 +10,20 @@
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { background-color: #001f3f; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 40px 20px; line-height: 1.6; }
         .icon { font-size: 60px; margin-bottom: 10px; }
-        h1 { font-size: 1.8rem; margin-bottom: 20px; letter-spacing: 2px; }
+        h1 { font-size: 1.8rem; margin-bottom: 25px; letter-spacing: 2px; }
         
         .content-text { 
             max-width: 500px; 
             margin: 0 auto 35px auto; 
             text-align: justify; 
-            font-size: 0.95rem; 
-            opacity: 0.9; 
+            font-size: 1rem; 
+            opacity: 0.95; 
         }
         
-        .content-text b { color: #ffc107; } /* Destaque em dourado */
+        .item-box { margin-bottom: 25px; }
+        .item-box b { color: #ffc107; font-size: 1.1rem; display: block; margin-bottom: 5px; }
+        
+        p.intro { text-align: center; font-style: italic; margin-bottom: 30px; color: #ffc107; }
     </style>
 </head>
 <body>
@@ -29,13 +32,22 @@
     <h1>ACADÊMICO</h1>
 
     <div class="content-text">
-        <p>No <b>Portal MAZZ</b>, transformamos a jornada acadêmica em uma experiência de sucesso e aprendizado prático. Nossa atuação é focada em oferecer suporte estratégico para estudantes e profissionais:</p>
-        
-        <p>• <b>Suporte em TCC:</b> Auxiliamos na estruturação, normas técnicas e fundamentação teórica para que seu trabalho final seja impecável.</p>
-        
-        <p>• <b>Estágios:</b> Conectamos você ao mercado através de oportunidades de <b>estágio presencial e remoto</b>, permitindo flexibilidade e experiência real na sua área de formação.</p>
-        
-        <p>• <b>Trabalhos Acadêmicos:</b> Consultoria especializada em diversos tipos de produções científicas e relatórios técnicos.</p>
+        <p class="intro">Soluções inteligentes para quem busca agilidade e excelência acadêmica.</p>
+
+        <div class="item-box">
+            <b>📚 TCC SEM ESTRESSE</b>
+            Auxílio completo na estruturação, aplicação de normas e desenvolvimento de conteúdo. Deixe a parte burocrática conosco e foque na sua apresentação de sucesso.
+        </div>
+
+        <div class="item-box">
+            <b>💼 CARREIRA E ESTÁGIO</b>
+            Encontre a oportunidade ideal para o seu crescimento. Conectamos estudantes a vagas de estágio presenciais ou home office (remoto) na sua área de atuação.
+        </div>
+
+        <div class="item-box">
+            <b>🛠️ SUPORTE ACADÊMICO</b>
+            Soluções sob medida para elaboração de relatórios técnicos, artigos e produções científicas. Qualidade e rigor garantidos por profissionais experientes.
+        </div>
     </div>
 
     <script src="footer.js"></script>
