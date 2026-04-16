@@ -1,20 +1,495 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologia - MAZZ</title>
-</head>
-<body style="background-color: #001f3f; color: white; font-family: sans-serif; text-align: center; padding: 20px;">
-    <div style="font-size: 80px; margin-top: 40px;">💻</div>
-    <h1>TECNOLOGIA</h1>
-    <p>Sistemas e Inovação</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>MAZZ - Programação & Dev</title>
+    <style>
+      :root {
+        --matrix-green: #00ff41;
+        --dark-bg: #0d0208;
+        --card-bg: rgba(0, 40, 0, 0.2);
+        --glow: 0 0 15px rgba(0, 255, 65, 0.6);
+      }
 
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 30px;">
-        <a href="#" style="background-color: white; color: #001f3f; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; width: 280px;">SOFTWARES DE ENGENHARIA</a>
-        <a href="#" style="background-color: white; color: #001f3f; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; width: 280px;">DESENVOLVIMENTO WEB</a>
-        <a href="#" style="background-color: white; color: #001f3f; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; width: 280px;">AUTOMAÇÃO</a>
-    </div>
-    <script src="footer.js"></script>
-</body>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--dark-bg);
+        color: var(--matrix-green);
+        font-family: "Courier New", Courier, monospace;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Scanline Effect */
+      body::before {
+        content: " ";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+            rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.1) 50%
+          ),
+          linear-gradient(
+            90deg,
+            rgba(255, 0, 0, 0.02),
+            rgba(0, 255, 0, 0.01),
+            rgba(0, 0, 255, 0.02)
+          );
+        z-index: 2000;
+        background-size: 100% 4px, 3px 100%;
+        pointer-events: none;
+      }
+
+      #matrix-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.25;
+      }
+
+      nav {
+        background: rgba(0, 0, 0, 0.9);
+        border-bottom: 2px solid var(--matrix-green);
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: var(--glow);
+      }
+
+      .nav-brand {
+        font-weight: bold;
+        font-size: 1.4rem;
+        text-shadow: var(--glow);
+        letter-spacing: 2px;
+      }
+
+      .nav-links a {
+        color: var(--matrix-green);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 15px;
+        border: 1px solid transparent;
+        transition: all 0.3s;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover {
+        border: 1px solid var(--matrix-green);
+        box-shadow: var(--glow);
+        background: rgba(0, 255, 65, 0.1);
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 15px;
+      }
+
+      header h1 {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+        letter-spacing: 5px;
+        text-shadow: var(--glow);
+        margin-bottom: 10px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        flex-grow: 1;
+      }
+
+      .course-card {
+        background: var(--card-bg);
+        border: 1px solid var(--matrix-green);
+        border-radius: 5px;
+        padding: 20px;
+        backdrop-filter: blur(8px);
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--glow);
+        background: rgba(0, 60, 0, 0.3);
+      }
+
+      .category-tag {
+        font-size: 0.6rem;
+        background: var(--matrix-green);
+        color: var(--dark-bg);
+        padding: 2px 6px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        align-self: flex-start;
+      }
+
+      .course-card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        color: #fff;
+        border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+        padding-bottom: 8px;
+        text-transform: uppercase;
+      }
+
+      .details {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+      }
+      .details b {
+        color: #fff;
+      }
+
+      .module-item {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+        padding-left: 10px;
+        border-left: 2px solid var(--matrix-green);
+      }
+
+      .btn-action {
+        margin-top: auto;
+        background: transparent;
+        border: 1px solid var(--matrix-green);
+        color: var(--matrix-green);
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+        text-transform: uppercase;
+      }
+
+      .btn-action:hover {
+        background: var(--matrix-green);
+        color: var(--dark-bg);
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        font-size: 0.75rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-top: 2px solid var(--matrix-green);
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <nav>
+      <div class="nav-brand">MAZZ</div>
+      <div class="nav-links">
+        <a href="index.html">INÍCIO</a>
+      </div>
+    </nav>
+
+    <header>
+      <h1>DESENVOLVIMENTO DE SOFTWARE</h1>
+      <p>> 20 Protocolos de Programação Carregados...</p>
+    </header>
+
+    <div class="container" id="grid"></div>
+
+    <footer><h2>&copy; 2026 MAZZ. Todos os direitos reservados <br>
+      Goiânia-GO | (62) 99646-6033</h2>
+    </footer>
+
+    <script>
+      // Matrix Rain Effect
+      const canvas = document.getElementById("matrix-canvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const chars = "010101ABCDEFHIJKLMNOPQRSTUVWXYZ";
+      const fontSize = 16;
+      const columns = canvas.width / fontSize;
+      const drops = Array(Math.floor(columns)).fill(1);
+
+      function draw() {
+        ctx.fillStyle = "rgba(13, 2, 8, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#00ff41";
+        ctx.font = fontSize + "px monospace";
+        for (let i = 0; i < drops.length; i++) {
+          const text = chars[Math.floor(Math.random() * chars.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+            drops[i] = 0;
+          drops[i]++;
+        }
+      }
+      setInterval(draw, 35);
+
+      // DATA - APENAS 20 CURSOS DE PROGRAMAÇÃO
+      const cursos = [
+        {
+          cat: "JAVA",
+          t: "Java Moderno Profissional",
+          m: [
+            "POO Avançada",
+            "Spring Boot 3",
+            "Hibernate/JPA",
+            "Microsserviços",
+            "Unit Testing (JUnit)",
+          ],
+        },
+        {
+          cat: "PYTHON",
+          t: "Python Full Stack",
+          m: [
+            "Sintaxe Core",
+            "Django Framework",
+            "Flask APIs",
+            "Automação",
+            "Data Scraping",
+          ],
+        },
+        {
+          cat: "JAVASCRIPT",
+          t: "JS Ninja: ES6 ao Node",
+          m: [
+            "Promises & Async",
+            "Manipulação de DOM",
+            "V8 Engine",
+            "Web APIs",
+            "Design Patterns",
+          ],
+        },
+        {
+          cat: "HTML/CSS",
+          t: "Interface Web Avançada",
+          m: [
+            "HTML5 Semântico",
+            "CSS Grid & Flexbox",
+            "SASS/SCSS",
+            "Animações CSS",
+            "Mobile First",
+          ],
+        },
+        {
+          cat: "FLUTTER",
+          t: "Mobile com Flutter/Dart",
+          m: [
+            "Widgets Customizados",
+            "State Management",
+            "Firebase Integration",
+            "Clean Arch",
+            "Native Modules",
+          ],
+        },
+        {
+          cat: "PHP",
+          t: "PHP 8 e Laravel 11",
+          m: [
+            "Laravel Core",
+            "Blade Engine",
+            "Eloquent ORM",
+            "API Restful",
+            "Filas e Jobs",
+          ],
+        },
+        {
+          cat: "REACT",
+          t: "React.js Ecosystem",
+          m: [
+            "Hooks & Context",
+            "Next.js 15",
+            "Redux Toolkit",
+            "Styled Components",
+            "Server Actions",
+          ],
+        },
+        {
+          cat: "NODE.JS",
+          t: "Backend Scalable Node",
+          m: [
+            "Express Framework",
+            "Middleware",
+            "Streams & Buffer",
+            "JWT Auth",
+            "Fastify",
+          ],
+        },
+        {
+          cat: "C#",
+          t: "Ecossistema .NET 9",
+          m: [
+            "C# Avançado",
+            "ASP.NET Core",
+            "Entity Framework",
+            "Azure Services",
+            "LINQ",
+          ],
+        },
+        {
+          cat: "TYPESCRIPT",
+          t: "TypeScript de Alto Nível",
+          m: [
+            "Generics",
+            "Interfaces & Types",
+            "Strict Typing",
+            "Decorators",
+            "TS com React",
+          ],
+        },
+        {
+          cat: "GO",
+          t: "Go (Golang) para Devs",
+          m: [
+            "Goroutines",
+            "Interfaces",
+            "Canais de Dados",
+            "Microservices",
+            "Concurrency",
+          ],
+        },
+        {
+          cat: "RUBY",
+          t: "Ruby on Rails Moderno",
+          m: [
+            "Ruby Core",
+            "MVC Pattern",
+            "Active Record",
+            "Hotwire",
+            "Sidekiq",
+          ],
+        },
+        {
+          cat: "C++",
+          t: "Programação C++ Performance",
+          m: [
+            "Memory Management",
+            "Pointers",
+            "STL Library",
+            "Multithreading",
+            "Game Dev Intro",
+          ],
+        },
+        {
+          cat: "SWIFT",
+          t: "Desenvolvimento iOS",
+          m: [
+            "SwiftUI",
+            "Combine Framework",
+            "Core Data",
+            "App Store Deploy",
+            "Concurrency",
+          ],
+        },
+        {
+          cat: "KOTLIN",
+          t: "Android Nativo com Kotlin",
+          m: [
+            "Jetpack Compose",
+            "Coroutines",
+            "Ktor",
+            "Dagger Hilt",
+            "Room Database",
+          ],
+        },
+        {
+          cat: "RUST",
+          t: "Segurança com Rust",
+          m: [
+            "Ownership & Borrowing",
+            "Cargo Package",
+            "Wasm",
+            "Safety Memory",
+            "Systems Dev",
+          ],
+        },
+        {
+          cat: "VUE.JS",
+          t: "Vue.js 3 e Pinia",
+          m: [
+            "Composition API",
+            "Pinia Store",
+            "Nuxt.js",
+            "Vite Tooling",
+            "Teleport",
+          ],
+        },
+        {
+          cat: "PHP",
+          t: "PHP Senior: Arquitetura",
+          m: [
+            "Domain Driven Design",
+            "Refatoração",
+            "Padrões PSR",
+            "Testes Unitários",
+            "Security",
+          ],
+        },
+        {
+          cat: "JS",
+          t: "NestJS para Backend",
+          m: [
+            "Dependency Injection",
+            "TypeORM",
+            "Swagger Docs",
+            "Microservices",
+            "Event Driven",
+          ],
+        },
+        {
+          cat: "CSS",
+          t: "Tailwind CSS Profissional",
+          m: [
+            "Utility-First",
+            "Custom Config",
+            "Responsive Design",
+            "PurgeCSS",
+            "Dark Mode",
+          ],
+        },
+      ];
+
+      const grid = document.getElementById("grid");
+      cursos.forEach((c) => {
+        const div = document.createElement("div");
+        div.className = "course-card";
+        div.innerHTML = `
+                <div class="category-tag">${c.cat}</div>
+                <h2>${c.t}</h2>
+                <div class="details">Status: <b>LIBERADO</b> | Carga: <b>40H</b></div>
+                ${c.m
+                  .map(
+                    (mod, i) =>
+                      `<div class="module-item">CODE_0${i + 1}: ${mod}</div>`
+                  )
+                  .join("")}
+                <a href="https://wa.me/5562996466033" class="btn-action">INICIAR_CODIFICAÇÃO</a>
+            `;
+        grid.appendChild(div);
+      });
+    </script>
+  </body>
 </html>
